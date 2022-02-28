@@ -1,6 +1,6 @@
 #!/bin/sh
-pyrep_src="../PyRep"
-env_name="catalystenv"
+pyrep_src="/home/abharad3/git_packages_dwnld/pyrep/PyRep"
+env_name="/home/abharad3/rl_pyenv"
 useGPU=0
 logs_folder=/home/$USER/Desktop
 config=./configs/config_inference.yml

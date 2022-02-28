@@ -5,6 +5,7 @@ import torch
 import torch.nn as nn
 
 from catalyst import utils
+from catalyst.contrib import utils as contrib_utils
 
 
 def _get_convolution_net(
@@ -54,7 +55,7 @@ def _get_convolution_net(
         layers.extend(_get_block(**block_params))
 
     net = nn.Sequential(*layers)
-    net.apply(utils.initialization.get_optimal_inner_init(activation_fn))
+    net.apply(contrib_utils.torch.get_optimal_inner_init(activation_fn))
     return net
 
 
@@ -96,7 +97,7 @@ def _get_linear_net(
         layers.extend(_get_block(**block_params))
 
     net = nn.Sequential(*layers)
-    net.apply(utils.initialization.get_optimal_inner_init(activation_fn))
+    net.apply(contrib_utils.torch.get_optimal_inner_init(activation_fn))
 
     return net
 

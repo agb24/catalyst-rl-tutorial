@@ -6,7 +6,7 @@ args:
   infer: 1
   valid: 0
   train: 0
-  resume:  # path to converged policy
+  resume: /home/abharad3/Desktop/tutorial_training/logs/220226-1621-config/50.pth # path to converged policy
 
 environment:
   environment: CoppeliaSimEnvWrapper
